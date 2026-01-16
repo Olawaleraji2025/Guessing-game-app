@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body-style">
+    <div class="container-style">
+        <header class="header-style">
+            <h1 class="title-style">Guess the Number</h1>
+            <p class="subtitle-style">Can you guess the secret number?</p>
+        </header>
+
+        <main>
+            <div class="main-grid">
+                <!-- Game Controls -->
+                <div class="game-controls">
+                    <div class="controls-header">
+                        <div class="difficulty-section">
+                            <span class="difficulty-label">Difficulty:</span>
+                            <select id="difficulty" class="difficulty-select">
+                                <option value="easy">Easy (1-50)</option>
+                                <option value="medium">Medium (1-100)</option>
+                                <option value="hard">Hard (1-200)</option>
+                            </select>
+                        </div>
+                        <div class="stats-section">
+                            <div class="stat-item">
+                                <i class="fa-regular fa-heart" style="color: #d40808;"></i>
+                                <span id="lives" class="stat-value">5</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fa-solid fa-award" style="color: #cba82a;"></i>
+                                <span id="score" class="stat-value">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-section">
+                        <div class="input-container">
+                            <input type="number" id="guess-input" class="guess-input" placeholder="Enter your guess">
+                            <button id="guess-btn" class="guess-btn">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <p id="hint" class="hint-text">Start guessing between 1 and 50</p>
+                    </div>
+
+                    <div class="guess-history-section">
+                        <h3 class="history-title">Your guesses:</h3>
+                        <div id="guess-history" class="guess-history"></div>
+                    </div>
+                </div>
+
+                <!-- Mystery Card -->
+                <div class="mystery-card-section">
+                    <div id="mystery-card">
+                        <i class="fa-solid fa-question"></i>
+                    </div>
+                    <p id="mystery-text" class="mystery-text">Guess the number to reveal!</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Game Over Modal -->
+        <div id="game-over-modal" class="modal-overlay">
+            <div class="modal-content">
+                <h2 class="modal-title" id="result-title">Game Over!</h2>
+                <p class="modal-message" id="result-message">The secret number was <span class="bold-text"></span>.</p>
+
+                <div class="modal-grid">
+                    <div class="score-card">
+                        <p class="score-label">Your Score</p>
+                        <p class="score-value" id="final-score">0</p>
+                    </div>
+                    <div class="score-card">
+                        <p class="score-label">High Score</p>
+                        <p class="score-value" id="high-score">0</p>
+                    </div>
+                </div>
+
+                <button id="play-again-btn" class="play-again-btn">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
