@@ -15,8 +15,6 @@ Hey there! Welcome to **Guess the Number**, a fun and challenging web-based game
 
 ## Technologies used
 
-This game is built with web standards for maximum compatibility:
-
 - **HTML5**: Structures the game interface and content.
 - **CSS3**: Handles all the styling, animations, and responsive design.
 - **JavaScript**: Powers the game logic, scoring, and local storage.
