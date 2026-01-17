@@ -20,3 +20,5 @@ Hey there! Welcome to **Guess the Number**, a fun and challenging web-based game
 - **JavaScript**: Powers the game logic, scoring, and local storage.
 - **Local Storage**: Remembers your high scores between sessions.
 
+Here is the live project: https://guessing-game-009.netlify.app
+
